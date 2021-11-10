@@ -146,7 +146,7 @@ function MintToken(props: {
           RaribleContractArtifact.abi,
           signer
         );
-        const uri = props.metadataCid;
+        const uri = `/ipfs/${props.metadataCid}`;
         const tokenId = packedTokenId(tokenIdResponse.tokenId as number);
         const tx = await contract.mintAndTransfer(
           [
